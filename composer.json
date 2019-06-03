@@ -9,12 +9,14 @@
     "ext-json": "*"
   },
   "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.4",
     "lipemat/wp-unit": "^1.5",
-    "phpunit/phpunit": "^7.0",
-    "wp-coding-standards/wpcs": "dev-develop"
+    "phpcompatibility/php-compatibility": "^9.2",
+    "phpunit/phpunit": "^7",
+    "squizlabs/php_codesniffer": "^3.4",
+    "wp-coding-standards/wpcs": "^2.1"
   },
   "scripts": {
-    "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs",
-    "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+    "lint": "./vendor/bin/phpcs"
   }
 }
